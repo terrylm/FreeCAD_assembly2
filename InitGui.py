@@ -3,7 +3,7 @@ import assembly2lib #QtCore.QResource.registerResource happens in assembly2lib
 class Assembly2Workbench (Workbench): 
     MenuText = 'Assembly 2'
     def Initialize(self):
-        import axialConstraint, assembly2solver, importPart, planeConstraint, circularEdgeConstraint, muxAssembly, angleConstraint, partsList, degreesOfFreedomAnimation, sphericalSurfaceConstraint, checkAssembly, boltMultipleCircularEdges
+        import axialConstraint, assembly2solver, importPart, planeConstraint, circularEdgeConstraint, muxAssembly, angleConstraint, partsList, manualDOFadj, degreesOfFreedomAnimation, sphericalSurfaceConstraint, checkAssembly, boltMultipleCircularEdges
         commandslist = [
             'importPart', 
             'updateImportedPartsCommand', 
@@ -13,6 +13,7 @@ class Assembly2Workbench (Workbench):
             'addAxialConstraint', 
             'addAngleConstraint', 
             'addSphericalSurfaceConstraint',
+						'manualDOFadj',
             'degreesOfFreedomAnimation', 
             'assembly2SolveConstraints',
             'muxAssembly',
